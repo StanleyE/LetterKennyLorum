@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-image:url('./images/letterkenny-logo.jpg');
+  background-position: top;
+  background-size: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+  margin: 4em auto 0;
+}
+
+.link{
+  margin: 3em;
+  padding:1em;
+  border-radius: 5%;
+  text-decoration: none;
+}
+
+.safe {
+  background:#800A06;
+  color: bisque;
+}
+
+.notsafe{
+  background: black;
+  color:white;
+}
