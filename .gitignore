@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /data
+/lkLorm.docx
 
 # testing
 /coverage
