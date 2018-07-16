@@ -28,9 +28,19 @@
 .safe {
   background:#800A06;
   color: bisque;
+  margin: 5em;
 }
 
 .notsafe{
   background: black;
   color:white;
+  margin: 5em;
+}
+
+p{
+  margin: 5em;
+}
+
+.btn{
+  margin:1em;
 }

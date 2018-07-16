@@ -5,6 +5,12 @@ import SafeForWork from './SafeForWork';
 import NotSafeForWork from './NotSafeForWork';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      quotes:['dummy data', 'I\'s thinks I\'m havings a stroke', 'the internets', 'whitefish', 'sushi', 'and thats what I appreciates abouts you', 'whos a dad?']
+    }
+  }
   render() {
     return (
       <div className="App">
@@ -18,8 +24,23 @@ class App extends Component {
           <Link class='link safe' to='/'SafeForWork > Safe for Work</Link>
           <Link class='link notsafe' to='/nsfw'NotSafeForWork > Not Safe for Work</Link>
         </nav>
+        <div>
+          <p>How many paragraphs do you need?</p>
+          <div class='dropdown'>
+            <button class='btn btn-secondary dropdown-toggle' type='button' id='select' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+            Pick a number
+            </button>
+            <div class='dropdown-menu' aria-labelledby='select'>
+                <button class='dropdown-item' type='button'>1</button>
+                <button class='dropdown-item' type='button'>2</button>
+                <button class='dropdown-item' type='button'>3</button>
+                <button class='dropdown-item' type='button'>4</button>
+                <button class='dropdown-item' type='button'>5</button>
+            </div>
+          </div>
+        </div>
         <Switch>
-          <Route exact path='/' render = {() => {return <SafeForWork />} } />
+          <Route exact path='/' render = {() => {return <SafeForWork quotes={this.state.quotes} />} } />
           <Route path='/nsfw' render = {() => {return <NotSafeForWork />} } />
         </Switch>
       </div>
