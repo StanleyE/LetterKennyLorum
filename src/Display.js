@@ -4,15 +4,16 @@ class Display extends Component {
     render() {
         let displayJSX=[];
         let data = this.props.quotes;
+        let paras = this.props.paragraphs;
         for (let i = 0; i < data.length; i++) {
-            displayJSX.push(data[i]);
-            
+            displayJSX.push(data[i]+ ' ');   
         }
 
         return (
             <div>
-                <p>I have connected.</p>
-                {displayJSX}
+                {paras}<br/>
+                {data}<br/>
+                <p>{displayJSX}</p>
             </div>
         );
     }
