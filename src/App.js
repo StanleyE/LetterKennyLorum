@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state={
       dummy:['dummy data.', 'I\'s thinks I\'m havings a stroke.', 'the internets.', 'whitefish.', 'sushi.', 'and thats what I appreciates abouts you.', 'whos a dad?'],
-      paras: 3,
+      paras: 1,
     }
   }
   render() {
@@ -29,14 +29,14 @@ class App extends Component {
           <p>How many paragraphs do you need?</p>
           <div className='dropdown'>
             <button className='btn btn-secondary dropdown-toggle' type='button' id='select' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-            Pick a number
+            Need More?
             </button>
             <div className='dropdown-menu' aria-labelledby='select'>
-                <button className='dropdown-item' type='button'>1</button>
                 <button className='dropdown-item' type='button'>2</button>
                 <button className='dropdown-item' type='button'>3</button>
                 <button className='dropdown-item' type='button'>4</button>
                 <button className='dropdown-item' type='button'>5</button>
+                <button className='dropdown-item' type='button'>6</button>
             </div>
           </div>
         </div>

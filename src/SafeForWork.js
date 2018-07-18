@@ -13,14 +13,16 @@ class SafeForWork extends Component {
     componentDidMount(){
         axios.get('http://localhost:8080/')
              .then(results =>{
-                 console.log('connected to server');
+                 //console.log('connected to server');
                  let mimic = Array.from(this.state.quotes);
-                 mimic.push(results.data);
+                 let resD = results.data;
+                 for (let j = 0; j < resD.length; j++) {
+                    mimic.push(resD[j]);                     
+                    }
                  this.setState({
                      quotes:mimic
                  });
-                console.log(results.data);
-                // console.log(this.state.quotes);
+                
              })
              .catch(error=>{
                  console.log('Giiirl, that did not work');
