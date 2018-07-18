@@ -66,35 +66,25 @@ function dataEntry(data) {
 
 app.get('/', (req, res)=>{
     let puppers=[];
-    let {q, safe} = req.body;
-    // Quote.find({})
-    //      .then(results=>{
-    //          if(!results){
-    //              res.json('Whoops, something went wrong!')
-    //          }
-    //          puppers.push(results.q);
-    //          console.log('results found');
-    //          res.json(puppers);
-    //      })
-    //      .catch(error=>{
-    //          console.log(error);
-    //      })
-    
-})
-
-let puppers=[];
-Quote.find({})
+    Quote.find({})
          .then(results=>{
              if(!results){
                  console.log('Whoops, something went wrong!')
              }
-             puppers.push(results);
-             console.log('results found');
-             console.log(puppers);
+             for (let i = 0; i < results.length; i++) {
+                puppers.push(results[i].quote);
+             }
+             //console.log('results found');
+             //console.log(results.length);
+            //console.log(results[0].quote);
+            res.json(puppers);
          })
          .catch(error=>{
              console.log(error);
          })
+    
+})
+
 
 
 

@@ -5,9 +5,10 @@ class Display extends Component {
         let displayJSX=[];
         let data = this.props.quotes;
         let paras = this.props.paragraphs;
-        for (let i = 0; i < data.length; i++) {
-            displayJSX.push(data[i]+ ' ');   
-        }
+            for (let i = 0; i < data.length; i++) {
+                displayJSX.push(data[i]+ '^');   
+            }
+            console.log(data);
 
         return (
             <div>

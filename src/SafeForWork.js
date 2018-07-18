@@ -7,19 +7,20 @@ class SafeForWork extends Component {
     constructor(){
         super();
         this.state={
-            quotes:{}
+            quotes:[]
         }
     }
     componentDidMount(){
         axios.get('http://localhost:8080/')
              .then(results =>{
                  console.log('connected to server');
-                //  this.setState({
-                //      quotes:{results}
-                //  })
-                // let pup= [];
-                // pup.push(results.data);
-                // console.log(pup);
+                 let mimic = Array.from(this.state.quotes);
+                 mimic.push(results.data);
+                 this.setState({
+                     quotes:mimic
+                 });
+                console.log(results.data);
+                // console.log(this.state.quotes);
              })
              .catch(error=>{
                  console.log('Giiirl, that did not work');
