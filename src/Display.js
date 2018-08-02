@@ -13,17 +13,9 @@ class Display extends Component {
             function generator(jsx) {
                 let tank = [];
                 let paragraph = [];
-                for (let i = 0; i < 7; i++) {
+                for (let i = 0; i < 10; i++) {
                     let random = Math.floor(Math.random()*43);
-                    if (tank.length > 0) {
-                        //if random is === to something already in the tank i minus 1
-                        for (let j = 0; j < tank.length; j++) {
-                            
-                            
-                        }
-                    } else {
-                        tank.push(random);
-                    }
+                    tank.push(random);
                 };
                 console.log(tank);
                 tank.forEach((ele)=>{
@@ -31,13 +23,13 @@ class Display extends Component {
                 });
                 return paragraph;
             }
-            // generator(displayJSX);
+            generator(displayJSX);
 
         return (
             <div>
                 {paras}<br/>
                 {/* {data}<br/> */}
-                <p>{displayJSX}</p>
+                {/* <p>{displayJSX}</p> */}
                 <p>{generator(displayJSX)}</p>
             </div>
         );
