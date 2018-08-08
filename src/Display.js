@@ -13,9 +13,28 @@ class Display extends Component {
             function generator(jsx) {
                 let tank = [];
                 let paragraph = [];
-                for (let i = 0; i < 10; i++) {
+                //main loop
+                for (let i = 0; i < 8; i++) {
+                    //generate random number
                     let random = Math.floor(Math.random()*43);
-                    tank.push(random);
+                    //if tank array don't have a number just push first number
+                    if (tank.length < 1) {
+                        tank.push(random);   
+                        //if tank array has an index greater than 1     
+                    } else {
+                        //compare new random to other numbers in array, if duplicate i-1
+                        let hold = 0;
+                       tank.forEach((element)=>{
+                            if (element === random) {
+                                hold++;
+                            }
+                       });
+                       if(hold > 0){
+                            i--;
+                       } else{
+                           tank.push(random);
+                       }
+                    }
                 };
                 console.log(tank);
                 tank.forEach((ele)=>{
@@ -23,7 +42,8 @@ class Display extends Component {
                 });
                 return paragraph;
             }
-            generator(displayJSX);
+            
+            generator(jsx);
 
         return (
             <div>

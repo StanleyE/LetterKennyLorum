@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state={
       dummy:['dummy data.', 'I\'s thinks I\'m havings a stroke.', 'the internets.', 'whitefish.', 'sushi.', 'and thats what I appreciates abouts you.', 'whos a dad?'],
-      paras: 1,
+      paras: 0,
     }
   }
   render() {
@@ -26,17 +26,17 @@ class App extends Component {
           <Link className='link notsafe' to='/nsfw'> Not Safe for Work</Link>
         </nav>
         <div>
-          <p>How many paragraphs do you need?</p>
+          <p>Well pitter patter, let's get at'er!</p>
           <div className='dropdown'>
             <button className='btn btn-secondary dropdown-toggle' type='button' id='select' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-            Need More?
+            Ones
             </button>
             <div className='dropdown-menu' aria-labelledby='select'>
-                <button className='dropdown-item' type='button'>2</button>
-                <button className='dropdown-item' type='button'>3</button>
-                <button className='dropdown-item' type='button'>4</button>
-                <button className='dropdown-item' type='button'>5</button>
-                <button className='dropdown-item' type='button'>6</button>
+                <button className='dropdown-item' type='button'>Twos</button>
+                <button className='dropdown-item' type='button'>Threes</button>
+                <button className='dropdown-item' type='button'>Fours</button>
+                <button className='dropdown-item' type='button'>Fives</button>
+                <button className='dropdown-item' type='button'>Sixes</button>
             </div>
           </div>
         </div>
