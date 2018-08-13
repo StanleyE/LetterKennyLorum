@@ -14,7 +14,7 @@ class Display extends Component {
                 let tank = [];
                 let paragraph = [];
                 //main loop
-                for (let i = 0; i < 8; i++) {
+                for (let i = 0; i < 15; i++) {
                     //generate random number
                     let random = Math.floor(Math.random()*43);
                     //if tank array don't have a number just push first number
@@ -25,6 +25,7 @@ class Display extends Component {
                         //compare new random to other numbers in array, if duplicate i-1
                         let hold = 0;
                        tank.forEach((element)=>{
+                           //loops through the array, if random is === an element in the array then hold is increased by 1
                             if (element === random) {
                                 hold++;
                             }
@@ -32,6 +33,7 @@ class Display extends Component {
                        if(hold > 0){
                             i--;
                        } else{
+                           //if hold was never increased then it should be safe to push random
                            tank.push(random);
                        }
                     }
@@ -43,10 +45,10 @@ class Display extends Component {
                 return paragraph;
             }
             
-            generator(jsx);
+            //generator(jsx);
 
         return (
-            <div>
+            <div className ='container'>
                 {paras}<br/>
                 {/* {data}<br/> */}
                 {/* <p>{displayJSX}</p> */}

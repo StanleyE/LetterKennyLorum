@@ -11,6 +11,19 @@ class App extends Component {
       dummy:['dummy data.', 'I\'s thinks I\'m havings a stroke.', 'the internets.', 'whitefish.', 'sushi.', 'and thats what I appreciates abouts you.', 'whos a dad?'],
       paras: 0,
     }
+ 
+  }
+  selectPars=(event)=>{
+    event.preventDefault();
+    let parNums = this.refs.parNumbers.value; 
+    this.parNumber(parNums);
+  }
+  parNumber=(num)=>{
+    let mimic = Array.from(this.state.paras);
+    mimic = num;
+    this.setState({
+      paras:mimic
+    })
   }
   render() {
     return (
@@ -27,18 +40,18 @@ class App extends Component {
         </nav>
         <div>
           <p>Well pitter patter, let's get at'er!</p>
-          <div className='dropdown'>
-            <button className='btn btn-secondary dropdown-toggle' type='button' id='select' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-            Ones
-            </button>
-            <div className='dropdown-menu' aria-labelledby='select'>
-                <button className='dropdown-item' type='button'>Twos</button>
-                <button className='dropdown-item' type='button'>Threes</button>
-                <button className='dropdown-item' type='button'>Fours</button>
-                <button className='dropdown-item' type='button'>Fives</button>
-                <button className='dropdown-item' type='button'>Sixes</button>
-            </div>
-          </div>
+          <form onSubmit ={this.selectPars} className= 'numberOfParas'>
+            <select className='btn btn-secondary' ref='parNumbers' >
+              <option value="1">Ones</option>
+              <option value="2">Twos</option>
+              <option value="3">Threes</option>
+              <option value="4">Fours</option>
+              <option value="5">Fives</option>
+              <option value="6">Sixes</option>
+              <option value="7">Sevens</option>
+            </select>
+            <button className='btn btn-secondary' type='submit' >Someone get this guy a Puppers</button>
+          </form>
         </div>
         <Switch>
           <Route exact path='/' render = {() => {return <SafeForWork quotes={this.state.dummy} paragraphs={this.state.paras}/>} } />
