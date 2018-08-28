@@ -14,13 +14,12 @@ class App extends Component {
  
   }
   selectPars=(event)=>{
+    //on submit refresh is prevented and the current value is collected
     event.preventDefault();
     let parNums = this.refs.parNumbers.value; 
-    this.parNumber(parNums);
-  }
-  parNumber=(num)=>{
+    //duplicate state is made then changed to current value and reassigned
     let mimic = Array.from(this.state.paras);
-    mimic = num;
+    mimic = parNums;
     this.setState({
       paras:mimic
     })
