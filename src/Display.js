@@ -14,7 +14,7 @@ class Display extends Component {
                 let tank = [];
                 let paragraph = [];
                 if (par === 0 || par === undefined) {
-                    return ('Back To Choring');
+                    return ('How\'re You Now?');
                 } else {
                     //main loop
                     for (let i = 0; i < 15; i++) {
@@ -42,16 +42,22 @@ class Display extends Component {
                     tank.forEach((ele)=>{
                         paragraph.push(jsx[ele]);
                     });
-                    //return paragraph;
-                    return paragraph;
+                    return paragraph; 
                 }
             }
 
 
         return (
             <div className ='container'>
-                {paras}<br/>
-                <p>{generator(displayJSX, paras)}</p>
+                <h5>How're you now?</h5>
+                {/* <p>{generator(displayJSX, paras)}</p> */}
+                <p>{paras > 0 ? generator(displayJSX, paras) : null }</p>
+                <p>{paras > 1 ? generator(displayJSX, paras) : null }</p>
+                <p>{paras > 2 ? generator(displayJSX, paras) : null }</p>
+                <p>{paras > 3 ? generator(displayJSX, paras) : null }</p>
+                <p>{paras > 4 ? generator(displayJSX, paras) : null }</p>
+                <p>{paras > 5 ? generator(displayJSX, paras) : null }</p>
+                <p>{paras > 6 ? generator(displayJSX, paras) : null }</p>
             </div>
         );
     }

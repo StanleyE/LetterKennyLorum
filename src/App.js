@@ -30,7 +30,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">LetterKenny Lorem Ipsum</h1>
         </header>
-        <div>
+        <div className='opener'>
           <p>Now don't be a pupper, you can class up your website with a little Letterkenny Lorum ispum! Fill any empty space with your favourite quotes from this great Canadian comedy. Regular safe for work or the Shorsey not so safe for work versions, be careful which ply you choose there bud.</p>
         </div>
         <nav>
