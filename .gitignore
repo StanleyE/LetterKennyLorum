@@ -3,8 +3,9 @@
 # dependencies
 /node_modules
 /data
+/~lkLorm.docx
 /lkLorm.docx
-/WRL0661.tmp
+/~WRL0661.tmp
 
 # testing
 /coverage
