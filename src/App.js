@@ -7,7 +7,7 @@ import NotSafeForWork from './NotSafeForWork';
 class App extends Component {
   constructor(){
     super();
-    this.state={
+    this.state = {
       dummy:['dummy data.', 'I\'s thinks I\'m havings a stroke.', 'the internets.', 'whitefish.', 'sushi.', 'and thats what I appreciates abouts you.', 'whos a dad?'],
       paras: 0,
     }
@@ -28,17 +28,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">LetterKenny Lorem Ipsum</h1>
-        </header>
-        <div className='opener'>
-          <p>Now don't be a pupper, you can class up your website with a little Letterkenny Lorum ispum! Fill any empty space with your favourite quotes from this great Canadian comedy. Regular safe for work or the Shorsey not so safe for work versions, be careful which ply you choose there bud.</p>
-        </div>
-        <nav>
+          <h1 className="App-title">Letterkenny Lorem Ipsum</h1>
+          <nav>
           <Link className='link safe' to='/'> Safe for Work</Link>
           <Link className='link notsafe' to='/nsfw'> Not Safe for Work</Link>
         </nav>
+        </header>
+        <div className='opener'>
+          <h5>Now don't be a pupper, you can class up your website with a little Letterkenny lorum ispum! Fill any empty space with your favourite quotes from this great Canadian comedy. Regular safe for work or the Shorsey not so safe for work versions, be careful which ply you choose there bud.</h5>
+        </div>
         <div>
-          <p>Well pitter patter, let's get at'er!</p>
+          <h2>Well pitter patter, let's get at'er!</h2>
           <form onSubmit ={this.selectPars} className= 'numberOfParas'>
             <select className='btn btn-secondary' ref='parNumbers' >
               <option value="1">Ones</option>
@@ -53,8 +53,8 @@ class App extends Component {
           </form>
         </div>
         <Switch>
-          <Route exact path='/' render = {() => {return <SafeForWork quotes={this.state.dummy} paragraphs={this.state.paras}/>} } />
-          <Route path='/nsfw' render = {() => {return <NotSafeForWork />} } />
+          <Route exact path='/' render = {() => {return <SafeForWork paragraphs={this.state.paras} />} } />
+          <Route path='/nsfw' render = {() => {return <NotSafeForWork paragraphs = {this.state.paras} />} } />
         </Switch>
       </div>
     );

@@ -6,7 +6,7 @@ const axios = require('axios');
 class SafeForWork extends Component {
     constructor(){
         super();
-        this.state={
+        this.state = {
             quotes:[]
         }
     }

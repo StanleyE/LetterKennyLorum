@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 600;
 }
 
 
@@ -10,44 +12,58 @@
   background-repeat: no-repeat;
   height: 65vh;
   padding: 20px;
-  color: white;
   margin-bottom:0;
 }
 
 .App-title {
-  font-size: 1.5em;
-  margin: 4em auto 0;
+  margin: 0.5em auto 0;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.1em;
+  color: #FFE4BC;
+  font-size: 5em;
+  text-shadow: 3px 4px 5px black;
 }
 
 .opener {
   background-color: #FFE4BC;
+  opacity: 0.7;
 }
 
-.opener p {
+.opener h5 {
   margin-top: 0;
+  padding:0.5em;
 }
 
-a.link.safe{
-  margin-top: 5em;
+nav {
+  display:flex;
+  justify-content: space-around;
 }
 
 .link{
-  margin: 3em;
-  padding:1em;
-  border-radius: 5%;
+  margin-top: 4em;
+  padding:1.5em;
   text-decoration: none;
+  box-shadow: 1px 2px 3px black;
+}
+
+.link:hover{
+  text-decoration: none;
+  font-style: italic;
+  color: silver;
 }
 
 .safe {
   background:#800A06;
-  color: #FFE4BC;
-  margin-left: 5em;
+  color: ghostwhite;
+  /* margin-left: 5em; */
+  border: 2px solid black;
 }
 
 .notsafe{
   background: black;
   color:white;
-  margin-left: 5em;
+  /* margin-left: 5em; */
+  border: 2px solid #800A06;
 }
 
 p{
@@ -58,6 +74,13 @@ p{
 .btn{
   margin:1em;
   background-color:#800A06;
+  border: 1px solid black;
+  box-shadow: 1px 3px 4px black;
+}
+
+.btn:hover{
+  background-color: #FFE4BC;
+  color: black;
 }
 
 #hide{
@@ -65,7 +88,9 @@ p{
 }
 
 .container{
+  padding:1em;
   border: 1.5px solid black;
   background-color: white;
   height: auto;
+  opacity: 0.8;
 }
