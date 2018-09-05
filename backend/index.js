@@ -25,8 +25,9 @@ const PORT = process.env.PORT || 8080;
 
 
 const Quote = require('./models/Quote');
+const Danger = require('./models/Danger');
 
-let data = ['It’s impolite to kiss and tell.', 'When the cat’s away, the mice will play.'];
+let data = ['Nice execution. You’re doing terrific.', 'You gonna fight with those shades or play poker stars dot com'];
 // Add new Quote Array
 function dataEntry(data) {
     const Quote = require('./models/Quote');
@@ -34,7 +35,7 @@ function dataEntry(data) {
     for (let i = 0; i < data.length; i++) {
         let newQ = Quote({
                 quote: data[i],
-                safe: true
+                safe: false
             });
         // console.log(newQ);
         newQ.save()
@@ -51,9 +52,9 @@ function dataEntry(data) {
 
 //Add new quote singular
 
-// let newQ = Quote({
-//     quote: '',
-//     safe: true
+// let newQ = Danger({
+//     quote: 'Tim’s, McDonalds and Beer Store all close on Christmas Day and that’s about your whole fucking world right there.',
+//     safe: false
 // });
 
 // newQ.save()
@@ -63,6 +64,8 @@ function dataEntry(data) {
 //     .catch(error =>{
 //         console.log(error);
 //     });
+
+
 
 app.get('/', (req, res)=>{
     let puppers=[];
@@ -85,6 +88,24 @@ app.get('/', (req, res)=>{
     
 })
 
+
+app.get('/nsfw', (req, res)=>{
+    let pheasants = [];
+    Danger.find({})
+          .then(results=>{
+              if(!results){
+                  console.log('Nothing here! Give your balls a tug!')
+              }
+              for(let x = 0; x < results.length; x++){
+                  pheasants.push(results[x].quote);
+                  console.log(results[0].quote);
+                  res.json(pheasants);
+              }
+          })
+          .catch(error=>{
+              console.log(error)
+          })
+})
 
 
 

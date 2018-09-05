@@ -19,7 +19,7 @@ class Display extends Component {
                     //main loop
                     for (let i = 0; i < 15; i++) {
                         //generate random number
-                        let random = Math.floor(Math.random()*43);
+                        let random = Math.floor(Math.random()*51);
                         //if tank array don't have a number just push first number
                         if (tank.length < 1) {
                             tank.push(random);   

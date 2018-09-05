@@ -6,9 +6,27 @@ class NotSafeForWork extends Component {
     constructor(){
         super();
         this.state = {
-            quotes: ['dummy data.', 'I\'s thinks I\'m havings a stroke.', 'the internets.', 'whitefish.', 'sushi.', 'and thats what I appreciates abouts you.', 'whos a dad?']
+            quotes: []
         }
     }
+    ComponentDidMount(){
+        axios.get('http://locolhost/8080')
+             .then(results=>{
+                 let mimic = Array.from(this.state.quotes);
+                 let resultsData = results.data;
+                 for (let x = 0; x < resultsData.length; x++) {
+                     mimic.push(resultsData[x]);  
+                 }
+                 this.setState({
+                     quotes:mimic
+                 });
+             })
+             .catch(error=>{
+                 console.log('God Lord that did not work');
+             });
+    }
+
+
     render() {
         return (
             <div>
