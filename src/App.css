@@ -11,6 +11,7 @@
   background-size: center;
   background-repeat: no-repeat;
   height: 65vh;
+  width: auto;
   padding: 20px;
   margin-bottom:0;
 }
@@ -19,14 +20,15 @@
   margin: 0.5em auto 0;
   font-family: 'Anton', sans-serif;
   letter-spacing: 0.1em;
-  color: #FFE4BC;
+  color: white;
   font-size: 5em;
-  text-shadow: 3px 4px 5px black;
+  text-shadow: 2px 4px 6px black;
 }
 
 .opener {
-  background-color: #FFE4BC;
-  opacity: 0.7;
+  background-color: white;
+  padding: .25em;
+  margin-bottom: .75em;
 }
 
 .opener h5 {
@@ -40,10 +42,11 @@ nav {
 }
 
 .link{
-  margin-top: 4em;
-  padding:1.5em;
-  text-decoration: none;
-  box-shadow: 1px 2px 3px black;
+  margin-top: 2em;
+  padding:1.5em .50em 0;
+  font-size: 2rem;
+  border-bottom: 2px solid white;
+  /* border-radius: 15%; */
 }
 
 .link:hover{
@@ -53,17 +56,13 @@ nav {
 }
 
 .safe {
-  background:#800A06;
-  color: ghostwhite;
-  /* margin-left: 5em; */
-  border: 2px solid black;
+  color: white;
+  text-shadow: 2px 3px 4px black;
 }
 
 .notsafe{
-  background: black;
   color:white;
-  /* margin-left: 5em; */
-  border: 2px solid #800A06;
+  text-shadow: 2px 3px 4px black;
 }
 
 p{
@@ -73,6 +72,9 @@ p{
 
 .btn{
   margin:1em;
+  padding: 1em;
+  font-size: 1em;
+  letter-spacing: 0.05em;
   background-color:#800A06;
   border: 1px solid black;
   box-shadow: 1px 3px 4px black;
@@ -83,8 +85,8 @@ p{
   color: black;
 }
 
-#hide{
-  display: hidden;
+.hide{
+  display: none;
 }
 
 .container{
@@ -93,4 +95,37 @@ p{
   background-color: white;
   height: auto;
   opacity: 0.8;
+  box-shadow: 1px 2px 3px black;
+}
+
+
+@media (max-width: 550px){
+  .App-title{
+    font-size: 3em;
+  }
+  .link{
+    font-size: 1.50em;
+  }
+  p{
+    padding: .25em;
+  }
+  .btn{
+    padding: .50em;
+  }
+}
+
+@media (max-width: 330px){
+  .App-title{
+    font-size: 2em;
+  }
+  .link{
+    margin-top: 0;
+    padding-top:.25em;
+  }
+  .opener{
+    padding:0;
+  }
+  h2{
+    -webkit-text-stroke: 0.25px white;
+  }
 }

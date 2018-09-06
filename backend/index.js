@@ -96,11 +96,11 @@ app.get('/nsfw', (req, res)=>{
               if(!results){
                   console.log('Nothing here! Give your balls a tug!')
               }
-              for(let x = 0; x < results.length; x++){
+              for (let x = 0; x < results.length; x++){
                   pheasants.push(results[x].quote);
-                  console.log(results[0].quote);
-                  res.json(pheasants);
               }
+                  //console.log(results[0].quote);
+                  res.json(pheasants);
           })
           .catch(error=>{
               console.log(error)

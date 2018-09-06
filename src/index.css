@@ -8,3 +8,10 @@ body {
   background-size: center;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 430px){
+  body{
+    background-position: bottom;
+    background-color: #a1c0d2;
+  }
+}

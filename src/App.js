@@ -23,6 +23,8 @@ class App extends Component {
     this.setState({
       paras:mimic
     })
+    let scroll = document.getElementById("display");
+    scroll.scrollIntoView();
   }
   render() {
     return (

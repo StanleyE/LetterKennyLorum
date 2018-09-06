@@ -48,16 +48,22 @@ class Display extends Component {
 
 
         return (
-            <div className ='container'>
+            <div id='display' className ='container'>
                 <h5>How're you now?</h5>
                 {/* <p>{generator(displayJSX, paras)}</p> */}
                 <p>{paras > 0 ? generator(displayJSX, paras) : null }</p>
-                <p>{paras > 1 ? generator(displayJSX, paras) : null }</p>
-                <p>{paras > 2 ? generator(displayJSX, paras) : null }</p>
-                <p>{paras > 3 ? generator(displayJSX, paras) : null }</p>
-                <p>{paras > 4 ? generator(displayJSX, paras) : null }</p>
-                <p>{paras > 5 ? generator(displayJSX, paras) : null }</p>
-                <p>{paras > 6 ? generator(displayJSX, paras) : null }</p>
+
+                <p className = {paras> 1 ? null : 'hide' } >{paras > 1 ? generator(displayJSX, paras) : null }</p>
+
+                <p className = {paras> 2 ? null : 'hide' } >{paras > 2 ? generator(displayJSX, paras) : null }</p>
+
+                <p className = {paras> 3 ? null : 'hide' } >{paras > 3 ? generator(displayJSX, paras) : null }</p>
+
+                <p className = {paras> 4 ? null : 'hide' } >{paras > 4 ? generator(displayJSX, paras) : null }</p>
+
+                <p className = {paras> 5 ? null : 'hide' } >{paras > 5 ? generator(displayJSX, paras) : null }</p>
+
+                <p className = {paras> 6 ? null : 'hide' } >{paras > 6 ? generator(displayJSX, paras) : null }</p>
             </div>
         );
     }
