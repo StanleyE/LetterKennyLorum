@@ -37,7 +37,7 @@ class App extends Component {
         </nav>
         </header>
         <div className='opener'>
-          <h5>Now don't be a pupper, you can class up your website with a little Letterkenny lorum ispum! Fill any empty space with your favourite quotes from this great Canadian comedy. Regular safe for work or the Shorsey not so safe for work versions, be careful which ply you choose there bud.</h5>
+          <h5>Now don't be a pupper, you can class up your website with a little Letterkenny lorum ispum! Fill any empty space with your favourite quotes from this great Canadian comedy. The Super Soft Safe for work or the Shorsey not so safe for work versions, be careful which ply you choose there bud.</h5>
         </div>
         <div>
           <h2>Well pitter patter, let's get at'er!</h2>
