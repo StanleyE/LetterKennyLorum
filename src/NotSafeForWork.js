@@ -10,10 +10,8 @@ class NotSafeForWork extends Component {
         }
     }
     componentDidMount(){
-        console.log('calling');
-        axios.get('http://localhost:8080/nsfw')
+        axios.get('/nsfw')
              .then(results=>{
-                 console.log('call sent');
                  let mimic = Array.from(this.state.quotes);
                  let resultsData = results.data;
                  for (let x = 0; x < resultsData.length; x++) {
@@ -24,7 +22,7 @@ class NotSafeForWork extends Component {
                  });
              })
              .catch(error=>{
-                 console.log('Good Lord! that did not work');
+                 console.log(error);
              });
     }
 

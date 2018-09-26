@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/LetterKenny');
+const DB_URL = process.env.NODE_ENV === 'production' ? process.env.DB_URL : 'mongodb://localhost/LetterKenny'
+mongoose.connect(DB_URL);
 const express = require('express'),
       app = express();
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 const db = mongoose.connection;
 db.on('open', ()=>{
@@ -20,6 +22,8 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
+
+app.use(express.static(__dirname + './../build'))
 
 const PORT = process.env.PORT || 8080;
 
@@ -107,7 +111,9 @@ app.get('/nsfw', (req, res)=>{
           })
 })
 
-
+app.get('*', (req, res) => {
+    res.sendFile('index.html', {root: __dirname + './../build'})
+})
 
 // express listener
 app.listen(PORT,()=>{
