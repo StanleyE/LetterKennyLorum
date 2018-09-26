@@ -37,7 +37,7 @@ class App extends Component {
         </nav>
         </header>
         <div className='opener'>
-          <h5>Now don't be a pupper, you can class up your website with a little Letterkenny lorum ispum! Fill any empty space with your favourite quotes from this great Canadian comedy. The Super Soft Safe for work or the Shorsey not so safe for work versions, be careful which ply you choose there bud.</h5>
+          <h5>Now don't be a pupper, you can class up your website with a little Letterkenny lorum ispum! Fill any empty space with your favourite quotes from this great Canadian comedy. The Super soft Safe for work or the Shorsey not so safe for work versions, be careful which ply you choose there bud.</h5>
         </div>
         <div>
           <h2>Well pitter patter, let's get at'er!</h2>
@@ -58,6 +58,13 @@ class App extends Component {
           <Route exact path='/' render = {() => {return <SafeForWork paragraphs={this.state.paras} />} } />
           <Route path='/nsfw' render = {() => {return <NotSafeForWork paragraphs = {this.state.paras} />} } />
         </Switch>
+        <footer>
+          <p>
+            Still need a fix? Check out the Official Site and grab some sweet merch <a href="http://www.letterkenny.tv" target= '_blank'>Here</a> or binge watch all available seasons on <a href="https://www.cravetv.ca/show/letterkenny-34584" target= '_blank'>CraveTV</a>
+            <br/>
+            And Thank God for Canadian Country Boys
+          </p>
+        </footer>
       </div>
     );
   }
