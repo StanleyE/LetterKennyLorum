@@ -6,6 +6,7 @@
 /~lkLorm.docx
 /lkLorm.docx
 /.env
+/package-lock.json
 
 # testing
 /coverage
