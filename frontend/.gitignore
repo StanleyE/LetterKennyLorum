@@ -3,7 +3,10 @@
 # dependencies
 /node_modules
 /data
+/~lkLorm.docx
+/lkLorm.docx
 /.env
+/package-lock.json
 
 # testing
 /coverage

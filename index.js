@@ -23,7 +23,7 @@ app.use((req, res, next) => {
     next();
   });
 
-app.use(express.static(__dirname + './../build'))
+app.use(express.static(__dirname + './frontend/build'))
 
 const PORT = process.env.PORT || 8080;
 
@@ -112,7 +112,7 @@ app.get('/nsfw', (req, res)=>{
 })
 
 app.get('*', (req, res) => {
-    res.sendFile('index.html', {root: __dirname + './../build'})
+    res.sendFile('index.html', {root: __dirname + './frontend/build'})
 })
 
 // express listener
