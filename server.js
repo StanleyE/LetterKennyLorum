@@ -4,7 +4,7 @@ mongoose.connect(DB_URL);
 const express = require('express'),
       app = express();
 const bodyParser = require('body-parser');
-require('dotenv').config();
+// require('dotenv').config();
 
 const db = mongoose.connection;
 db.on('open', ()=>{
@@ -23,7 +23,7 @@ app.use((req, res, next) => {
     next();
   });
 
-app.use(express.static(__dirname + './frontend/build'))
+app.use(express.static(__dirname + './client/build'))
 
 const PORT = process.env.PORT || 8080;
 
@@ -83,13 +83,12 @@ app.get('/', (req, res)=>{
              }
              //console.log('results found');
              //console.log(results.length);
-            //console.log(results[0].quote);
+            // console.log(results[0].quote);
             res.json(puppers);
          })
          .catch(error=>{
              console.log(error);
          })
-    
 })
 
 
@@ -112,7 +111,7 @@ app.get('/nsfw', (req, res)=>{
 })
 
 app.get('*', (req, res) => {
-    res.sendFile('index.html', {root: __dirname + './frontend/build'})
+    res.sendFile('index.html', {root: __dirname + './client/build'})
 })
 
 // express listener

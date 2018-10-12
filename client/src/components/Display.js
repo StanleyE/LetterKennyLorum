@@ -9,6 +9,8 @@ class Display extends Component {
                 displayJSX.push(data[i]+ ' ');   
             }
             console.log(displayJSX.length);
+            // console.log(displayJSX);
+
             //need a function that is going to take the paras number and make X# paragraph(s) using math.random to randomly pick (via index position) quotes from displayJSX
             function generator(jsx, par) {
                 let tank = [];

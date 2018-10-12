@@ -98,6 +98,29 @@ p{
   box-shadow: 1px 2px 3px black;
 }
 
+.disclaim {
+  background-color:white;
+  margin-top: 1em;
+  margin: auto;
+  width: 60vw;
+}
+
+footer {
+  background-color: black;
+  color: grey;
+  display:flex;
+}
+
+footer span {
+  align-content: flex-start;
+  justify-items: space-between;
+}
+
+footer p{
+  margin: 0;
+  padding: 0;
+}
+
 
 @media (max-width: 550px){
   .App-title{

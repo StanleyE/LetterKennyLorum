@@ -11,7 +11,7 @@ class SafeForWork extends Component {
         }
     }
     componentDidMount(){
-        axios.get('/')
+        axios.get('http://localhost:8080/')
              .then(results =>{
                  //console.log('connected to server');
                  let mimic = Array.from(this.state.quotes);

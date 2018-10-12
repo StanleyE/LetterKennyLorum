@@ -58,12 +58,22 @@ class App extends Component {
           <Route exact path='/' render = {() => {return <SafeForWork paragraphs={this.state.paras} />} } />
           <Route path='/nsfw' render = {() => {return <NotSafeForWork paragraphs = {this.state.paras} />} } />
         </Switch>
-        <footer>
+        <div className="disclaim">
           <p>
             Still need a fix? Check out the Official Site and grab some sweet merch <a href="http://www.letterkenny.tv" target= '_blank'>Here</a> or binge watch all available seasons on <a href="https://www.cravetv.ca/show/letterkenny-34584" target= '_blank'>CraveTV</a>
             <br/>
             And Thank God for Canadian Country Boys
           </p>
+        </div>
+        <footer>
+          <span>
+            <h6>Who made this?</h6>
+            <p>Just a fan that happens to be a junior web developer, you can check out my personal site <a href="http://www.ericasweb.com" target= '_blank'>here</a></p>
+          </span>
+          <span>
+            <h6>I love the field background!</h6>
+            <p>Check out the photographer from unsplash <a href="https://unsplash.com/photos/tylohxbj5tg" target="_blank">here!</a></p>
+          </span>
         </footer>
       </div>
     );
