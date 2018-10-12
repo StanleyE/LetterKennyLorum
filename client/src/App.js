@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
-import SafeForWork from './SafeForWork';
-import NotSafeForWork from './NotSafeForWork';
+import SafeForWork from './components/SafeForWork';
+import NotSafeForWork from './components/NotSafeForWork';
 
 class App extends Component {
   constructor(){
