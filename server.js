@@ -4,7 +4,7 @@ mongoose.connect(DB_URL);
 const express = require('express'),
       app = express();
 const bodyParser = require('body-parser');
-// require('dotenv').config();
+const path = require('path');
 
 const db = mongoose.connection;
 db.on('open', ()=>{
@@ -23,7 +23,7 @@ app.use((req, res, next) => {
     next();
   });
 
-app.use(express.static(__dirname + './client/build'))
+app.use(express.static(path.join(__dirname + './client/build')))
 
 const PORT = process.env.PORT || 8080;
 
