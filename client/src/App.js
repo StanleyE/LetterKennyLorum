@@ -60,17 +60,17 @@ class App extends Component {
         </Switch>
         <div className="disclaim">
           <p>
-            Still need a fix? Check out the Official Site and grab some sweet merch <a href="http://www.letterkenny.tv" target= '_blank'>Here</a> or binge watch all available seasons on <a href="https://www.cravetv.ca/show/letterkenny-34584" target= '_blank'>CraveTV</a>
+            Still need a fix? Check out the Official Site and grab some sweet merch <a href="http://www.letterkenny.tv" target= '_blank' rel="noopener noreferrer">Here</a> or binge watch all available seasons on <a href="https://www.cravetv.ca/show/letterkenny-34584" target= '_blank'rel='noopener noreferrer'>CraveTV</a>
             <br/>
             And Thank God for Canadian Country Boys
           </p>
         </div>
         <footer>
           <span>
-            <p>Who the heck made this? Just a fan that happens to be a junior web developer, you can check out my site <a href="http://www.ericasweb.com" target='_blank'>here!</a></p>
+            <p>Who the heck made this? Just a fan that happens to be a junior web developer, you can check out my site <a href="http://www.ericasweb.com" target='_blank' rel='noopener noreferrer' >here!</a></p>
           </span>
           <span>
-            <p>I love the field background! Check out the photographer from unsplash <a href="https://unsplash.com/photos/tylohxbj5tg" target="_blank">here!</a></p>
+            <p>I love the field background! Check out the photographer from unsplash <a href="https://unsplash.com/photos/tylohxbj5tg" target="_blank" rel='noopener noreferrer'>here!</a></p>
           </span>
         </footer>
       </div>
