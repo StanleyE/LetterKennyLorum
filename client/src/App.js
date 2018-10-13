@@ -67,12 +67,10 @@ class App extends Component {
         </div>
         <footer>
           <span>
-            <h6>Who made this?</h6>
-            <p>Just a fan that happens to be a junior web developer, you can check out my personal site <a href="http://www.ericasweb.com" target= '_blank'>here</a></p>
+            <p>Who the heck made this? Just a fan that happens to be a junior web developer, you can check out my site <a href="http://www.ericasweb.com" target='_blank'>here!</a></p>
           </span>
           <span>
-            <h6>I love the field background!</h6>
-            <p>Check out the photographer from unsplash <a href="https://unsplash.com/photos/tylohxbj5tg" target="_blank">here!</a></p>
+            <p>I love the field background! Check out the photographer from unsplash <a href="https://unsplash.com/photos/tylohxbj5tg" target="_blank">here!</a></p>
           </span>
         </footer>
       </div>

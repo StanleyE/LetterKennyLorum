@@ -4,6 +4,7 @@
 /node_modules
 /data
 /.env
+/config
 
 # testing
 /coverage

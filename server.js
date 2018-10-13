@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const DB_URL = process.env.NODE_ENV === 'production' ? process.env.DB_URL : 'mongodb://localhost/LetterKenny'
+const DB_URL = require('./config/keys').mongoURI
 mongoose.connect(DB_URL);
 const express = require('express'),
       app = express();

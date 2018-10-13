@@ -10,7 +10,7 @@ class NotSafeForWork extends Component {
         }
     }
     componentDidMount(){
-        axios.get('http://localhost:8080/nsfw')
+        axios.get('http://www.letterkennylorem.ca/nsfw')
              .then(results=>{
                  let mimic = Array.from(this.state.quotes);
                  let resultsData = results.data;

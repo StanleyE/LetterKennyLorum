@@ -112,13 +112,17 @@ footer {
 }
 
 footer span {
-  align-content: flex-start;
-  justify-items: space-between;
+  padding-left:2em;
 }
 
 footer p{
   margin: 0;
-  padding: 0;
+  padding: 5px;
+}
+
+footer a{
+  color: grey;
+  text-decoration: underline;
 }
 
 
