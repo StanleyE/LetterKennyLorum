@@ -10,7 +10,7 @@ class NotSafeForWork extends Component {
         }
     }
     componentDidMount(){
-        axios.get('https://sleepy-lake-88121.herokuapp.com/nsfw')
+        axios.get('https://letterkennylorem.herokuapp.com/nsfw')
              .then(results=>{
                  let mimic = Array.from(this.state.quotes);
                  let resultsData = results.data;
