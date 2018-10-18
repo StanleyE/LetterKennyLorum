@@ -1,10 +1,13 @@
 const mongoose = require('mongoose');
-const DB_URL = require('./config/keys').mongoURI
+const DB_URL = process.env.NODE_ENV === 'production' ? process.env.DB_URL : 'mongodb://localhost/CapStone'
 mongoose.connect(DB_URL);
 const express = require('express'),
       app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
+
+//import config from './config';
+require('dotenv').config(); // this line reads all the key-value pairs from your .env into process.env
 
 const db = mongoose.connection;
 db.on('open', ()=>{
@@ -124,6 +127,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // express listener
-app.listen(PORT,()=>{
+app.listen(PORT, () => {
     console.log('Party rockin\' on ', PORT);
 })
