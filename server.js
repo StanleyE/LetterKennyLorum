@@ -29,7 +29,7 @@ app.use((req, res, next) => {
     next();
   });
 
-app.use(express.static(__dirname + './client/build'));
+app.use(express.static('./client/build'));
 
 
 const PORT = process.env.PORT || 8080;
