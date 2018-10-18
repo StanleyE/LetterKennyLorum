@@ -78,7 +78,7 @@ function dataEntry(data) {
 
 
 
-app.get('/safe', (req, res)=>{
+app.get('/', (req, res)=>{
     let puppers=[];
     Quote.find({})
          .then(results=>{
