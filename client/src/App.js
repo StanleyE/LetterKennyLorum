@@ -55,7 +55,7 @@ class App extends Component {
           </form>
         </div>
         <Switch>
-          <Route exact path='/' render = {() => {return <SafeForWork paragraphs={this.state.paras} />} } />
+          <Route exact path='/safe' render = {() => {return <SafeForWork paragraphs={this.state.paras} />} } />
           <Route path='/nsfw' render = {() => {return <NotSafeForWork paragraphs = {this.state.paras} />} } />
         </Switch>
         <div className="disclaim">
