@@ -32,7 +32,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Letterkenny Lorem Ipsum</h1>
           <nav>
-          <Link className='link safe' to='/'> Safe for Work</Link>
+          <Link className='link safe' to='/safe'> Safe for Work</Link>
           <Link className='link notsafe' to='/nsfw'> Not Safe for Work</Link>
         </nav>
         </header>
