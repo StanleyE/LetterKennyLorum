@@ -11,7 +11,7 @@ class SafeForWork extends Component {
         }
     }
     componentDidMount(){
-        axios.get('https://sleepy-lake-88121.herokuapp.com/')
+        axios.get('https://sleepy-lake-88121.herokuapp.com/safe')
              .then(results =>{
                  //console.log('connected to server');
                  let mimic = Array.from(this.state.quotes);
