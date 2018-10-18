@@ -11,6 +11,7 @@ db.on('open', ()=>{
     console.log('Release the Mongoose!');
 });
 
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
