@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 //connect to mlab url in config.js
-const DB_URL = require('./config/config').mongoURI
+const DB_URL = require('./config').mongoURI
 mongoose.connect(DB_URL);
 const express = require('express'),
       app = express();
